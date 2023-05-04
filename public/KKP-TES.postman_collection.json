@@ -1,0 +1,474 @@
+{
+	"info": {
+		"_postman_id": "622932e7-50e7-4eb9-b4e7-8c24dae7ec9a",
+		"name": "KKP-TES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9971461"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "izal",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "alisadikinsyahrizal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "11111111",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "11111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "alisadikinsyahrizal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "11111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMjE1NTM2LCJleHAiOjE2ODMyMTkxMzYsIm5iZiI6MTY4MzIxNTUzNiwianRpIjoiY29jYU45MDZMZENucUs4diIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.q33AFk4UlkaOnUCvhWkF1lQvJdza-08SJBP_GuoFr0Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMjE1NTM2LCJleHAiOjE2ODMyMTkxMzYsIm5iZiI6MTY4MzIxNTUzNiwianRpIjoiY29jYU45MDZMZENucUs4diIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.q33AFk4UlkaOnUCvhWkF1lQvJdza-08SJBP_GuoFr0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "izal",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "alisadikinsyahrizal@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMjE1NTM2LCJleHAiOjE2ODMyMTkxMzYsIm5iZiI6MTY4MzIxNTUzNiwianRpIjoiY29jYU45MDZMZENucUs4diIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.q33AFk4UlkaOnUCvhWkF1lQvJdza-08SJBP_GuoFr0Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/refresh-token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMjE1NTM2LCJleHAiOjE2ODMyMTkxMzYsIm5iZiI6MTY4MzIxNTUzNiwianRpIjoiY29jYU45MDZMZENucUs4diIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.q33AFk4UlkaOnUCvhWkF1lQvJdza-08SJBP_GuoFr0Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Kapal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMjE2MDk5LCJleHAiOjE2ODMyMTk2OTksIm5iZiI6MTY4MzIxNjA5OSwianRpIjoiMHh5YnRzdHJhTEpQUnpydyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.rOHFEfKP6m9CZE6iXDvu7X5qyp2ZqbyPk4OtANsP8YA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kapal?kode=1233",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kapal"
+					],
+					"query": [
+						{
+							"key": "kode",
+							"value": "1233"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Kapal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMjE2MDk5LCJleHAiOjE2ODMyMTk2OTksIm5iZiI6MTY4MzIxNjA5OSwianRpIjoiMHh5YnRzdHJhTEpQUnpydyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.rOHFEfKP6m9CZE6iXDvu7X5qyp2ZqbyPk4OtANsP8YA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "kode",
+							"value": "1233",
+							"type": "text"
+						},
+						{
+							"key": "nama_kapal",
+							"value": "Pesiar3",
+							"type": "text"
+						},
+						{
+							"key": "nama_pemilik",
+							"value": "izal3",
+							"type": "text"
+						},
+						{
+							"key": "alamat_pemilik",
+							"value": "bandung",
+							"type": "text"
+						},
+						{
+							"key": "ukuran_kapal",
+							"value": "besar",
+							"type": "text"
+						},
+						{
+							"key": "kapten",
+							"value": "raden",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_anggota",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "foto_kapal",
+							"type": "file",
+							"src": "/Users/macbookair/Documents/integrasi/Screen Shot 2023-04-27 at 18.36.53.png"
+						},
+						{
+							"key": "nomor_izin",
+							"value": "1021",
+							"type": "text"
+						},
+						{
+							"key": "dokumen_perizinan",
+							"type": "file",
+							"src": "/Users/macbookair/Documents/integrasi/Screen Shot 2023-04-27 at 18.36.53.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kapal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kapal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Kapal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMjE2MDk5LCJleHAiOjE2ODMyMTk2OTksIm5iZiI6MTY4MzIxNjA5OSwianRpIjoiMHh5YnRzdHJhTEpQUnpydyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.rOHFEfKP6m9CZE6iXDvu7X5qyp2ZqbyPk4OtANsP8YA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kode",
+							"value": "1233",
+							"type": "text"
+						},
+						{
+							"key": "nama_kapal",
+							"value": "baru layar",
+							"type": "text"
+						},
+						{
+							"key": "nama_pemilik",
+							"value": "izal",
+							"type": "text"
+						},
+						{
+							"key": "alamat_pemilik",
+							"value": "jakarta",
+							"type": "text"
+						},
+						{
+							"key": "ukuran_kapal",
+							"value": "sedang",
+							"type": "text"
+						},
+						{
+							"key": "kapten",
+							"value": "ganteng",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_anggota",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "nomor_izin",
+							"value": "745",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kapal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kapal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
