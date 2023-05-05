@@ -15,7 +15,7 @@ class AuthController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('auth:api')->except(['register', 'login']);
+        $this->middleware('auth:api')->except(['register', 'login', 'verifyOtp']);
     }
 
     public function register(Request $request)
@@ -56,6 +56,35 @@ class AuthController extends Controller
         return response()->json([
             'success' => false,
         ], 409);
+    }
+
+    public function verifyOtp(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email'    => 'required|email|exists:users',
+            'otp'    => 'required|exists:users',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 400);
+        }
+
+        $user = User::where('email', $request->email)->where('otp', $request->otp)->first();
+        if ($user) {
+            $user->update([
+                'status' => 1,
+            ]);
+            return response()->json([
+                'success' => true,
+                'message' => "User Berhasil di verify",
+                'user' => $user
+            ]);
+        }
+
+        return response()->json([
+            'success' => false,
+            'message' => "User Tidak ada"
+        ], 404);
     }
 
     public function login(Request $request)
